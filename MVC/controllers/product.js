@@ -1,4 +1,5 @@
-const products = [];
+const Product = require('../modals/product')
+const products = []
 
 module.exports.productController = (req, res, next) => {
     res.render('add-product', {
@@ -11,8 +12,10 @@ module.exports.productController = (req, res, next) => {
   }
 
   module.exports.postAddproduct = (req, res, next) => {
-    products.push({ title: req.body.title });
+    
+    const product = new Product(req.body.title);
+    product.save();
     res.redirect('/');
   }
 
-  exports.products = products
+  exports.products = products ;

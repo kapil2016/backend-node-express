@@ -18,4 +18,6 @@ router.get('/orders', shopController.getOrders);
 
 router.get('/checkout', shopController.getCheckout);
 
+router.post('/add-to-cart/:productId',shopController.postAddToCart)
+
 module.exports = router;

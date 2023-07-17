@@ -27,7 +27,7 @@
                                 </div>
                                 <div class="card__actions">
                                         <a href="products/<%= product.id %>" class="btn">Details</a>
-                                    <form action="/add-to-cart" method="POST">
+                                    <form action="/add-to-cart/<%= product.id %>"" method="POST">
                                         <button class="btn">Add to Cart</button>
                                     </form>
                                 </div>

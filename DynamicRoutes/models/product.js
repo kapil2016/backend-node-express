@@ -45,4 +45,23 @@ module.exports = class Product {
       cb(product) ;
     })
   }
+
+  static editProductDetails(product){
+    getProductsFromFile(products => {
+      const index = products.findIndex(item => item.id ===product.id)
+      products[index] = product ;
+      fs.writeFile(p, JSON.stringify(products), err => {
+        console.log(err);
+      });
+    });
+  }
+
+  static deleteProduct(id){
+    getProductsFromFile(products => {
+      const updatedProducts = products.filter(item => item.id !== id)
+      fs.writeFile(p, JSON.stringify(updatedProducts), err => {
+        console.log(err);
+      });
+    });
+  }
 };

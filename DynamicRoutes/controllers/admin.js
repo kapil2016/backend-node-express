@@ -29,3 +29,31 @@ exports.getProducts = (req, res, next) => {
     });
   });
 };
+
+exports.editProduct = (req , res , next)=>{
+  const productId = req.params.productId ;
+  Product.findByID(productId , (product)=>{
+    res.render('admin/edit-product', {
+      product:product,
+      pageTitle: product.title,
+      path: '/admin/edit-product',
+      formsCSS: true,
+      productCSS: true,
+      activeAddProduct: false
+    });
+  })
+  
+}
+
+exports.postEditProduct = (req , res , next)=>{
+  const id = req.params.productId
+  const product = {...req.body,id:id}
+  Product.editProductDetails(product)
+  res.redirect('/admin/products')
+
+}
+exports.deleteProduct=(req , res , next)=>{
+  const id = req.params.productId
+  Product.deleteProduct(id)
+  res.redirect('/admin/products')
+}

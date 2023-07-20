@@ -1,0 +1,72 @@
+._form_1cxhu_3 {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+._formGroup_1cxhu_10 {
+  margin-bottom: 20px;
+}
+label {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+}
+._submitButton_1cxhu_27 {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+._submitButton_1cxhu_27:hover {
+  background-color: #0056b3;
+}
+._listItem_balk3_3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+._userInfo_balk3_13 {
+  flex: 1;
+}
+._username_balk3_17 {
+  font-size: 18px;
+  font-weight: 700;
+}
+._email_balk3_22,
+._phone_balk3_22 {
+  font-size: 14px;
+  color: #666;
+}
+._buttonGroup_balk3_27 {
+  display: flex;
+  gap: 10px;
+}
+._editButton_balk3_32,
+._deleteButton_balk3_32 {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+._editButton_balk3_32 {
+  background-color: #007bff;
+  color: #fff;
+}
+._deleteButton_balk3_32 {
+  background-color: #dc3545;
+  color: #fff;
+}
